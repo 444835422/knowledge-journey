@@ -1,0 +1,301 @@
+Classfile /Users/baiyumei/workspace/simpletest/simple-test/src/main/java/jvm/week1/BytecodeAnalysis.class
+  Last modified 2021-11-6; size 1343 bytes
+  MD5 checksum 1c49753cf91fb86d4dbfa6a320f07cf0
+  Compiled from "BytecodeAnalysis.java"
+public class jvm.week1.BytecodeAnalysis
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #11.#44        // java/lang/Object."<init>":()V
+   #2 = Fieldref           #5.#45         // jvm/week1/BytecodeAnalysis.lambdaFlag:Z
+   #3 = Methodref          #46.#47        // java/util/Arrays.stream:([I)Ljava/util/stream/IntStream;
+   #4 = InterfaceMethodref #48.#49        // java/util/stream/IntStream.sum:()I
+   #5 = Class              #50            // jvm/week1/BytecodeAnalysis
+   #6 = Methodref          #5.#51         // jvm/week1/BytecodeAnalysis."<init>":(Z)V
+   #7 = Methodref          #5.#52         // jvm/week1/BytecodeAnalysis.add:([I)I
+   #8 = Methodref          #5.#53         // jvm/week1/BytecodeAnalysis.div:(II)J
+   #9 = Methodref          #5.#54         // jvm/week1/BytecodeAnalysis.mul:(II)F
+  #10 = Methodref          #5.#55         // jvm/week1/BytecodeAnalysis.sub:(II)D
+  #11 = Class              #56            // java/lang/Object
+  #12 = Utf8               lambdaFlag
+  #13 = Utf8               Z     ---基本类型boolean
+  #14 = Utf8               <init>
+  #15 = Utf8               (Z)V
+  #16 = Utf8               Code
+  #17 = Utf8               LineNumberTable
+  #18 = Utf8               LocalVariableTable
+  #19 = Utf8               this
+  #20 = Utf8               Ljvm/week1/BytecodeAnalysis;
+  #21 = Utf8               sub
+  #22 = Utf8               (II)D
+  #23 = Utf8               a
+  #24 = Utf8               I
+  #25 = Utf8               b
+  #26 = Utf8               add
+  #27 = Utf8               ([I)I
+  #28 = Utf8               i
+  #29 = Utf8               sum
+  #30 = Utf8               ints
+  #31 = Utf8               [I
+  #32 = Utf8               StackMapTable
+  #33 = Utf8               mul
+  #34 = Utf8               (II)F
+  #35 = Utf8               div
+  #36 = Utf8               (II)J
+  #37 = Utf8               main
+  #38 = Utf8               ([Ljava/lang/String;)V
+  #39 = Utf8               args
+  #40 = Utf8               [Ljava/lang/String;
+  #41 = Utf8               bytecodeAnalysis
+  #42 = Utf8               SourceFile
+  #43 = Utf8               BytecodeAnalysis.java
+  #44 = NameAndType        #14:#57        // "<init>":()V
+  #45 = NameAndType        #12:#13        // lambdaFlag:Z
+  #46 = Class              #58            // java/util/Arrays
+  #47 = NameAndType        #59:#60        // stream:([I)Ljava/util/stream/IntStream;
+  #48 = Class              #61            // java/util/stream/IntStream
+  #49 = NameAndType        #29:#62        // sum:()I
+  #50 = Utf8               jvm/week1/BytecodeAnalysis
+  #51 = NameAndType        #14:#15        // "<init>":(Z)V
+  #52 = NameAndType        #26:#27        // add:([I)I
+  #53 = NameAndType        #35:#36        // div:(II)J
+  #54 = NameAndType        #33:#34        // mul:(II)F
+  #55 = NameAndType        #21:#22        // sub:(II)D
+  #56 = Utf8               java/lang/Object
+  #57 = Utf8               ()V
+  #58 = Utf8               java/util/Arrays
+  #59 = Utf8               stream
+  #60 = Utf8               ([I)Ljava/util/stream/IntStream;
+  #61 = Utf8               java/util/stream/IntStream
+  #62 = Utf8               ()I
+{
+  boolean lambdaFlag;
+    descriptor: Z
+    flags:
+
+  public jvm.week1.BytecodeAnalysis(boolean);
+    descriptor: (Z)V
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=2, args_size=2
+         0: aload_0              ----将第一个引用类型本地变量推送至栈顶
+         1: invokespecial #1     ----调用超类Object的init方法             // Method java/lang/Object."<init>":()V
+         4: aload_0              ----将第一个引用类型本地变量推送至栈顶
+         5: iconst_0             ----将int型0推送至栈顶
+         6: putfield      #2     ----为类的实例域赋值             // Field lambdaFlag:Z
+         9: aload_0              ----将第一个引用类型本地变量推送至栈顶
+        10: iload_1              ----将第二个int型本地变量推动至栈顶
+        11: putfield      #2     ----为类的实例域赋值             // Field lambdaFlag:Z
+        14: return               ----当前方法返回为void
+      LineNumberTable:
+        line 8: 0
+        line 7: 4
+        line 9: 9
+        line 10: 14
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      15     0  this   Ljvm/week1/BytecodeAnalysis;
+            0      15     1 lambdaFlag   Z
+
+  public double sub(int, int);
+    descriptor: (II)D
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=3, args_size=3
+         0: iload_1     ----将第二个int型本地变量推动至栈顶
+         1: iload_2     ----将第三个int型本地变量推动至栈顶
+         2: isub        ----将栈顶两int型数值相减并将结果压入栈顶
+         3: i2d         ----将栈顶int型数值强制转成double数值并将结果压入栈顶
+         4: dreturn     ----从当前方法返回double
+      LineNumberTable:
+        line 12: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Ljvm/week1/BytecodeAnalysis;
+            0       5     1     a   I
+            0       5     2     b   I
+
+  public int add(int[]);
+    descriptor: ([I)I
+    flags: ACC_PUBLIC
+    Code:
+      stack=3, locals=4, args_size=2
+         0: aload_0              ----将第一个引用类型本地变量推送至栈顶
+         1: getfield      #2     ----获取指定类的实例域，并将值压入栈顶             // Field lambdaFlag:Z
+         4: ifeq          17     ----当栈顶的int型数值等于0时跳转17 （boolean类型编译后转为int，0代表false，1为true）
+         7: aload_1              ----将第二个引用类型本地变量推送至栈顶
+         8: invokestatic  #3     ----调用Arrays静态方法stream()             // Method java/util/Arrays.stream:([I)Ljava/util/stream/IntStream;
+        11: invokeinterface #4,  1      ----调用接口IntStream方法sum()     // InterfaceMethod java/util/stream/IntStream.sum:()I
+        16: ireturn              ----从当前方法返回int
+        17: iconst_0             ----将int型0推送至栈顶
+        18: istore_2             ----将栈顶int型数值存入第三个本地变量
+        19: iconst_0             ----将int型0推送至栈顶
+        20: istore_3             ----将栈顶int型数值存入第四个本地变量
+        21: iload_3              ----将第四个int型本地变量推送至栈顶
+        22: aload_1              ----将第二个引用类型本地变量推送至栈顶
+        23: arraylength          ----获得数组长度并压入栈顶
+        24: if_icmpge     39     ----比较栈顶两int型数值的大小当结果大于或等于0时跳转39
+        27: iload_2              ----将第三个int型本地变量推送至栈顶
+        28: aload_1              ----将第二个引用类型本地变量推送至栈顶
+        29: iload_3              ----将第四个int型本地变量推送至栈顶
+        30: iaload               ----将int型数组指定索引号的值推送至栈顶
+        31: iadd                 ----将栈顶两int型数值相加并将结果压入栈顶
+        32: istore_2             ----将栈顶int型数值存入第三个本地变量
+        33: iinc          3, 1   ----将指定int型变量增加指定值（第四个int型本地变量+1）
+        36: goto          21     ----无条件跳转21
+        39: iload_2              ----将第三个int型本地变量推送至栈顶
+        40: ireturn              ----从当前方法返回int
+      LineNumberTable:
+        line 16: 0
+        line 17: 7
+        line 19: 17
+        line 20: 19
+        line 21: 27
+        line 20: 33
+        line 23: 39
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           21      18     3     i   I
+           19      22     2   sum   I
+            0      41     0  this   Ljvm/week1/BytecodeAnalysis;
+            0      41     1  ints   [I
+      StackMapTable: number_of_entries = 3
+        frame_type = 17 /* same */
+        frame_type = 253 /* append */
+          offset_delta = 3
+          locals = [ int, int ]
+        frame_type = 250 /* chop */
+          offset_delta = 17
+
+  public float mul(int, int);
+    descriptor: (II)F
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=3, args_size=3
+         0: iload_1     ----将第二个int型本地变量推动至栈顶
+         1: iload_2     ----将第三个int型本地变量推动至栈顶
+         2: imul        ----将栈顶两int型数值相乘并将结果压入栈顶
+         3: i2f         ----将栈顶int型数值强制转成float数值并将结果压入栈顶
+         4: freturn     ----从当前方法返回float
+      LineNumberTable:
+        line 27: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Ljvm/week1/BytecodeAnalysis;
+            0       5     1     a   I
+            0       5     2     b   I
+
+  public long div(int, int);
+    descriptor: (II)J
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=3, args_size=3
+         0: iconst_0          ----将int型0推送至栈顶
+         1: iload_2           ----将第三个int型本地变量推送至栈顶
+         2: if_icmpne     7   ----比较栈顶两int型数值大小，当结果不等于0时跳转
+         5: lconst_0          ----将long型0推送至栈顶
+         6: lreturn           ----从当前方法返回long
+         7: iload_1           ----将第二个int型本地变量推送至栈顶
+         8: iload_2           ----将第三个int型本地变量推送至栈顶
+         9: idiv              ----将栈顶两int型数值相除并将结果压入栈顶
+        10: i2l               ----将栈顶int型数值强制转成long数值并将结果压入栈顶
+        11: lreturn           ----从当前方法返回long
+      LineNumberTable:
+        line 31: 0
+        line 32: 5
+        line 34: 7
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      12     0  this   Ljvm/week1/BytecodeAnalysis;
+            0      12     1     a   I
+            0      12     2     b   I
+      StackMapTable: number_of_entries = 1
+        frame_type = 7 /* same */
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=5, locals=2, args_size=1
+         0: new           #5         ----创建一个对象BytecodeAnalysis，并将引入至压入栈顶         // class jvm/week1/BytecodeAnalysis
+         3: dup                      ----复制栈顶数值并将其复制值压入栈顶
+         4: iconst_1                 ----将int型1推动到栈顶（lambdaFlag值为true 编译后为int值1）
+         5: invokespecial #6         ----调用实例初始化方法         // Method "<init>":(Z)V
+         8: astore_1                 ----将栈顶引入型数值存入第二个本地变量
+         9: aload_1                  ----将第二个引入类型本地变量推送至栈顶
+        10: iconst_4                 ----将int型4推动到栈顶（数组长度）
+        11: newarray       int       ----创建一个指定int类型的数组，并将其引入值压入栈顶
+        13: dup                      ----复制栈顶数值并将其复制值压入栈顶
+        14: iconst_0                 ----将int型0推动到栈顶（数组索引号0）
+        15: iconst_1                 ----将int型1推动到栈顶（索引号0数值为1，下一步赋值）
+        16: iastore                  ----将栈顶int型数值存入指定数组的指定索引位置
+        17: dup                      ----复制栈顶数值并将其复制值压入栈顶
+        18: iconst_1                 ----将int型1推动到栈顶（索引号为1）
+        19: iconst_3                 ----将int型3推动到栈顶（索引号1数值为3，下一步赋值）
+        20: iastore                  ----将栈顶int型数值存入指定数组的指定索引位置
+        21: dup                      ----复制栈顶数值并将其复制值压入栈顶
+        22: iconst_2                 ----将int型2推动到栈顶（索引号为2）
+        23: iconst_5                 ----将int型5推动到栈顶（索引号2数值为5，下一步赋值）
+        24: iastore                  ----将栈顶int型数值存入指定数组的指定索引位置
+        25: dup                      ----复制栈顶数值并将其复制值压入栈顶
+        26: iconst_3                 ----将int型3推动到栈顶（索引号为3）
+        27: bipush        6          ----将单字节的常量值6推送至栈顶（索引号3数值为6，下一步赋值）
+        29: iastore                  ----将栈顶int型数值存入指定数组的指定索引位置
+        30: invokevirtual #7         ----调用实例方法add         // Method add:([I)I
+        33: pop                      ----将栈顶的数值弹出
+        34: aload_1                  ----将第二个引用类型本地变量推送至栈顶
+        35: iconst_0                 ----将int型0推动到栈顶
+        36: putfield      #2         ----为类的实例域赋值         // Field lambdaFlag:Z
+        39: aload_1                  ----将第二个引用类型本地变量推送至栈顶
+        40: iconst_4                 ----将int型4推动到栈顶（数组长度为4）
+        41: newarray       int       ----创建一个指定int类型的数组，并将其引入值压入栈顶
+        43: dup                      ----复制栈顶数值并将其复制值压入栈顶
+        44: iconst_0                 ----将int型0推动到栈顶（数组索引号0）
+        45: iconst_1                 ----将int型1推动到栈顶（索引号0位置的数值为1，下一步赋值）
+        46: iastore                  ----将栈顶int型数值存入指定数组的指定索引位置
+        47: dup                      ----复制栈顶数值并将其复制值压入栈顶
+        48: iconst_1                 ----将int型1推动到栈顶
+        49: iconst_3                 ----将int型3推动到栈顶
+        50: iastore                  ----将栈顶int型数值存入指定数组的指定索引位置
+        51: dup                      ----复制栈顶数值并将其复制值压入栈顶
+        52: iconst_2                 ----将int型2推动到栈顶
+        53: iconst_5                 ----将int型5推动到栈顶
+        54: iastore                  ----将栈顶int型数值存入指定数组的指定索引位置
+        55: dup                      ----复制栈顶数值并将其复制值压入栈顶
+        56: iconst_3                 ----将int型3推动到栈顶
+        57: bipush        6          ----将单字节的常量值6推送至栈顶
+        59: iastore                  ----将栈顶int型数值存入指定数组的指定索引位置
+        60: invokevirtual #7         ----调用实例方法add         // Method add:([I)I
+        63: pop                      ----将栈顶的数值弹出
+        64: aload_1                  ----将第二个引用类型本地变量推送至栈顶
+        65: iconst_3                 ----将int型3推动到栈顶
+        66: iconst_5                 ----将int型5推动到栈顶
+        67: invokevirtual #8         ----调用实例方法div                // Method div:(II)J
+        70: pop2                     ----将栈顶的数值弹出（long类型）
+        71: aload_1                  ----将第二个引用类型本地变量推送至栈顶
+        72: iconst_4                 ----将int型4推动到栈顶
+        73: bipush        6          ----将单字节的常量值6推送至栈顶
+        75: invokevirtual #9         ----调用实例方法mul          // Method mul:(II)F
+        78: pop                     ----将栈顶的数值弹出
+        79: aload_1                  ----将第二个引用类型本地变量推送至栈顶
+        80: iconst_3                 ----将int型3推动到栈顶
+        81: iconst_5                 ----将int型5推动到栈顶
+        82: invokevirtual #10        ----调用实例方法sub         // Method sub:(II)D
+        85: pop2                     ----将栈顶的数值弹出（double类型）
+        86: return                   ----当前方法返回为void
+      LineNumberTable:
+        line 39: 0
+        line 40: 9
+        line 41: 34
+        line 42: 39
+        line 43: 64
+        line 44: 71
+        line 45: 79
+        line 46: 86
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      87     0  args   [Ljava/lang/String;
+            9      78     1 bytecodeAnalysis   Ljvm/week1/BytecodeAnalysis;
+}
+SourceFile: "BytecodeAnalysis.java"
